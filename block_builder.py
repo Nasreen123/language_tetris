@@ -1,47 +1,41 @@
 import pygame
 
-#Define colors
+"""#Define colors
 BLACK    = (   0,   0,   0)
 WHITE    = ( 255, 255, 255)
 GREEN    = (   0, 255,   0)
 RED      = ( 255,   0,   0)
 BLUE     = (   0,   0, 255)
-
+"""
 
 class Block(pygame.sprite.Sprite):
-    def __init__(self, word, units):
+    def __init__(self, word, units, colors, font_color):
         pygame.sprite.Sprite.__init__(self)
-        #self.id = this_id
         self.x = 275
         self.y = 0
         self.word = word
         self.change_x = 0
         self.change_y = 0
-        self.colors = [GREEN, BLUE, RED]
+        self.colors = colors #[GREEN, BLUE, RED]
         self.color = self.colors[int(units)]
-        self.test = False
-        self.font_color = BLACK
+        self.font_color = font_color
         self.active = True
         self.length = units * 25 + 75
         self.image = pygame.Surface((self.length,50))
         self.rect = self.image.get_rect()
-        self.collided_with = []
 
-
-        ############# FIX RECTANGLES!!!
     def move(self, change_x, change_y):
         change_x = change_x * 25
         change_y = change_y * 3
-        if self.x + change_x > 600:
+        if self.x + change_x > 600: #don't let block move off screen
             self.x = 600
         elif self.x + change_x < 0:
             self.x = 0
         else:
             self.x = self.x + change_x
-
         self.y += change_y
-        self.rect.move_ip(change_x,0)
-        self.rect.move_ip(0,change_y)
+        self.rect.move_ip(change_x,change_y) #update rect
+
 
 
     def draw(self, screen):
