@@ -9,7 +9,14 @@ import math
 ['une', 'annee'],
 ['une', 'chance']
 ]
+
+
+sentences = [
+['this', 'is', 'a', 'sentence'],
+['can', 'you', 'detect', 'a', 'sentence']
+]
 """
+
 sentences = [
 ['one', 'two', 'three'],
 ['four', 'five', 'six']

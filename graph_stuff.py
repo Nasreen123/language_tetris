@@ -1,4 +1,3 @@
-import networkx as nx
 
 """
 GRAPH FUNCTIONS
@@ -12,6 +11,10 @@ search_graph: INPUT: graph, sentences OUTPUT: nodes that form a sentence (first 
 
 remove_nodes: INPUT: graph, nodes to remove OUTPUT: updated graph
 """
+import networkx as nx
+
+def create_graph():
+    return nx.MultiGraph()#graph to store block collision info
 
 def add_node(graph, block):
     graph.add_node(block)
@@ -36,7 +39,7 @@ def look_through_neighbors(graph, neighbors, i, sentence):
         for neighbor in neighbors:
             matching_neighbors = [node for node in graph.neighbors(neighbor) if node.word == sentence[i]]
             match = look_through_neighbors(graph, matching_neighbors, i, sentence)
-            if type(match) == list:
+            if isinstance(match, list):
                 match.append(neighbor)
                 return match
 

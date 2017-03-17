@@ -1,5 +1,4 @@
 import pygame
-import networkx as nx
 import graph_stuff
 import word_logic
 import block_builder
@@ -18,7 +17,8 @@ game_over = False #Runs until closed
 clock = pygame.time.Clock() ##Manage speed
 tracker = block_tracker.Tracker()
 sentences = word_logic.sentences
-graph = nx.MultiGraph()#graph to store block collision info
+graph = graph_stuff.create_graph()
+
 #Define colors
 BLACK    = (   0,   0,   0)
 WHITE    = ( 255, 255, 255)
