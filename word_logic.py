@@ -1,25 +1,11 @@
 import random
 import math
 
-"""sentences = [
-['bonne', 'chance'],
-['bonne', 'annee'],
-['quelle', 'chance'],
-['annee', 'prochaine'],
-['une', 'annee'],
-['une', 'chance']
-]
-
-
 sentences = [
-['this', 'is', 'a', 'sentence'],
-['can', 'you', 'detect', 'a', 'sentence']
-]
-"""
-
-sentences = [
-['one', 'two', 'three'],
-['four', 'five', 'six']
+['comment', 'vas-tu'],
+['bon', 'chance'],
+['quelle', 'heure', 'est-il'],
+['a', 'vos', 'souhaits']
 ]
 
 #sentences_sets = [set(l) for l in sentences]
