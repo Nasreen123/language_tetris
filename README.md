@@ -6,9 +6,13 @@ The game uses the pygame library for the interface, and uses [a graph to store d
  
 Run language\_tetris.py to play (type ```python language_tetris.py``` into your terminal)
 
-![Screenshot of the game, with a falling block](screenshot_falling_block.png)
 
-![Screenshot of the game, as a phrase is formed](screenshot_phrase_formed.png)
+<img src="screenshot_falling_block.png" 
+alt="Screenshot of the game, with a falling block" width="240" height="180" border="10" />
+
+<img src="screenshot_phrase_formed.png" 
+alt="Screenshot of the game, as a phrase is formed" width="240" height="180" border="10" />
+
 
 ---------------------------------------------------
 
