@@ -8,10 +8,10 @@ Run language\_tetris.py to play (type ```python language_tetris.py``` into your 
 
 
 <img src="screenshot_falling_block.png" 
-alt="Screenshot of the game, with a falling block" width="240" height="180" border="10" />
+alt="Screenshot of the game, with a falling block" width="400"  style="border: 1px solid black;" />
 
 <img src="screenshot_phrase_formed.png" 
-alt="Screenshot of the game, as a phrase is formed" width="240" height="180" border="10" />
+alt="Screenshot of the game, as a phrase is formed" width="400" style="border: 1px solid black;" />
 
 
 ---------------------------------------------------
