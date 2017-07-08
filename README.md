@@ -6,10 +6,10 @@ The game uses the pygame library for the interface, and uses [a graph to store d
 
 
 <img src="screenshot_falling_block.png"
-alt="Screenshot of the game, with a falling block" width="250"  style="border: 1px solid black;" />
+alt="Screenshot of the game, with a falling block" width="250"  style="border: 1px solid black; display: inline-block;" />
 
 <img src="screenshot_phrase_formed.png"
-alt="Screenshot of the game, as a phrase is formed" width="250" style="border: 1px solid black;" />
+alt="Screenshot of the game, as a phrase is formed" width="250" style="border: 1px solid black; display: inline-block;" />
 
 
 ## Usage
