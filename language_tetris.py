@@ -1,9 +1,13 @@
+import sys
 import pygame
 import graph_stuff
 import word_logic
 import block_builder
 import block_tracker
 import game_functions
+
+#phrases_file_name = sys.argv[1]
+#print phrases_file_name
 
 pygame.init()
 
@@ -16,7 +20,7 @@ pygame.display.set_caption("Language-Tetris")
 game_over = False #Runs until closed
 clock = pygame.time.Clock() ##Manage speed
 tracker = block_tracker.Tracker()
-sentences = word_logic.sentences
+phrases = word_logic.phrases
 graph = graph_stuff.create_graph()
 
 #Define colors
@@ -83,10 +87,10 @@ while not game_over:
 
                 for each_block in collided_with:
                     graph = graph_stuff.add_collision(graph, block, each_block) #add collision edges to graph
-                    sentence_forming_blocks = graph_stuff.search_graph(graph, sentences) #check if sentences formed
+                    sentence_forming_blocks = graph_stuff.search_graph(graph, phrases) #check if phrases formed
 
                     if sentence_forming_blocks:
-                        graph = graph_stuff.remove_nodes(graph, sentence_forming_blocks) #so no longer count to making sentences
+                        graph = graph_stuff.remove_nodes(graph, sentence_forming_blocks) #so no longer count to making phrases
                         for block in sentence_forming_blocks:
                             block.color = WHITE # white blocks will fall off the screen
                             tracker.remove_block_from_landed_sprites(block) #so no longer detect collisions while they are falling

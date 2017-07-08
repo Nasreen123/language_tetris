@@ -1,21 +1,23 @@
 import random
 import math
+import sys
 
-sentences = [
-['comment', 'vas-tu'],
-['bon', 'chance'],
-['quelle', 'heure', 'est-il'],
-['a', 'vos', 'souhaits']
-]
 
-#sentences_sets = [set(l) for l in sentences]
+def get_phrases():
+    if len(sys.argv) > 1:
+        filename = sys.argv[1]
+    else:
+        filename = 'phrases.txt'
+    with open(filename) as textfile:
+        phrases = [[word for word in line.strip().split(' ')] for line in textfile]
+    return phrases
+
+phrases = get_phrases()
+
+print phrases
 
 def get_word():
-    sentence = sentences[random.randint(0,(len(sentences)-1))]
-    word = sentence[random.randint(0,(len(sentence)-1))]
+    phrase = phrases[random.randint(0,(len(phrases)-1))]
+    word = phrase[random.randint(0,(len(phrase)-1))]
     units = math.floor(len(word)/4)
-    #print word, 'LENGTH: ', len(word), 'UNITS: ', units
     return word, units
-
-#def check_if_sentence(word1, word2):
-#    return set([word1, word2]) in sentences_sets
